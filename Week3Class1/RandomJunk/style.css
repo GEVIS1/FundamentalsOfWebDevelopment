@@ -1,0 +1,66 @@
+.parent, .class4{
+    color: red;
+}
+
+.multiple{
+    font-size: 50px;
+}
+
+/*.class3{
+    font-style: italic;
+}
+*/
+
+
+.staircase.huge:hover{
+    font-style: italic;
+    font-size: 200px;
+}
+
+.staircase > div:nth-of-type(odd){
+    size: 40px;
+}
+
+/* These two should target the same div*/
+.level9{
+    font-size: 100px;
+}
+
+.level1 > 
+    .level2 > 
+        .level3 > 
+            .level4 > 
+                .level5 > 
+                    .level6 > 
+                        .level7 > 
+                            .level8 > 
+                                .level9{
+    color: magenta;
+}
+
+.squares{
+    display:flex;
+    size:50px;
+}
+
+.square1{
+    order:1;
+    background-color:red;
+    
+    
+}
+
+.square2{
+    order:2;
+    background-color:green;
+}
+
+.square3{
+    order:3;
+    background-color:blue;
+}
+
+.square4{
+    order:4;
+    background-color:black;
+}
