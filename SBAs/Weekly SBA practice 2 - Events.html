@@ -142,6 +142,7 @@
 
         // Without this one pixel the cannon will overshoot on the right and create a scrollbar
         const SCROLLBAR = 1;
+        const MOVE = 10;
         
         // Is cannon.style.width meant to return null by default?
         cannon.style.width = "100px";
@@ -151,11 +152,15 @@
         let maxLeft = document.defaultView.innerWidth - parseInt(cannon.style.width, 10) - SCROLLBAR;
         
         // BONUS ===============================================v
+        function calculateStart(){
+            return currLeft + (parseInt(cannon.style.width, 10) / 2) + PIXELOFFSET;
+        };
+        
         const PIXELOFFSET = -3;
         let bullet = document.createElement("div");             
         let bulletSpeed = 10;
         let bulletColour = "fuchsia";
-        let startLeft = 0;  
+        let startLeft = -10;  
         let startBottom = 0;
         let endBottom = 0;  
         let player = bullet.animate([
@@ -163,9 +168,6 @@
             {transform: "translate(0,-100vh)"}
         ], 500);
 
-        function calculateStart(){
-            return currLeft + (parseInt(cannon.style.width, 10) / 2) + PIXELOFFSET;
-        };
         
         bullet.className = "bullet";
         bullet.style.cssText = `
@@ -180,11 +182,11 @@
 
         document.addEventListener("keydown", (event) => {
             if (event.key == "ArrowRight" && currLeft <= maxLeft) {
-                currLeft += 10;
+                currLeft += MOVE;
             };
 
             if (event.key == "ArrowLeft" && currLeft > minLeft) {
-                currLeft -= 10;
+                currLeft -= MOVE;
             };
 
             cannon.style.left = currLeft + "px";
