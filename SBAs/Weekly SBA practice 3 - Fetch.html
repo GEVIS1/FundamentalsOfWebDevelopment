@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .page{
+        width:30vw;
+        height:75vh;
+        border:1px solid #333;       
+        overflow:hidden; 
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1, h2, h3{
+        text-align: center;
+        text-transform:capitalize;
+    }
+
+    .image{
+        background-image:url('https://images.unsplash.com/photo-1631374750606-bb2229939980?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size:cover;
+        height:100%;
+        background-position: center;
+    }
+
+</style>
+
+<body>
+    
+    <div class="page">
+        <div class="header">
+            <h1>For One Night Only!</h1>
+            <h2 id="bandName"></h2>
+            <h2>Forsyth Barr Stadium</h2>
+            <h3>DATE HERE</h3>
+        </div>
+        <div class="image"></div>
+    </div>
+
+    <script>
+    
+        /*
+        
+            Who is performing for one night only?? Complete the band poster!
+            Use this random work API to generate a random band name: https://github.com/dulldesk/words-api/
+            Read the documentation to see how to use.
+
+            You will need to fetch two words from the API to construct the name - an adjective and a noun.
+            The band name will take the form "Adjective Noun" - e.g. "Successful Abdomen".
+
+            You will put the two words into the h2 element with the bandName id.
+
+            Also generate the date of the show - generate TODAY'S date - you'll have to look up how to
+            do that in JS. Replace the contents of the h3 with the generated date.
+        
+        */
+
+        const apiUrl = `https://random-word-form.herokuapp.com/random/`;
+        
+        // //With cascading "then"s
+        // fetch(apiUrl + `adjective`)
+        //     .then(response => { return response.json() })
+        //     .then(data => {
+        //         adjective = data;
+        //     })
+        //     .then(    
+        //         fetch(apiUrl + `noun`)
+        //         .then(response => { return response.json()})
+        //         .then(data => {
+        //             noun = data;
+        //             console.log(`The selected adjective is: ${adjective}.\nThe selected noun is: ${noun}.`);
+
+        //             let h2 = document.getElementById("bandName");
+        //             h2.innerText = adjective + " " + noun;
+
+        //             let date = new Date();
+        //             let currentDate = date.toDateString();
+        //             let h3 = document.querySelector("h3");
+        //             h3.innerText = currentDate;
+        //     }));
+
+        // With Async
+        (async () => {
+            let response = await fetch(apiUrl + `adjective`);
+            let data = await response.json();
+            let adjective = data;
+            response = await fetch(apiUrl + `noun`);
+            data = await response.json();
+            let noun = data;
+            console.log(`The selected adjective is: ${adjective}.\nThe selected noun is: ${noun}.`);
+
+            let h2 = document.getElementById("bandName");
+            h2.innerText = adjective + " " + noun;
+
+            let date = new Date();
+            let currentDate = date.toDateString();
+            let h3 = document.querySelector("h3");
+            h3.innerText = currentDate;
+            
+
+         })();
+    </script>
+
+</body>
+</html>
