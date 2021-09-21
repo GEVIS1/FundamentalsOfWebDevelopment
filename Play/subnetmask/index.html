@@ -9,9 +9,41 @@
 </head>
 <body>
     <div class="label">
-        <input type="text" name="address" id="addr"><br>
-        <input type="text" name="network" id="netw"><br>
-        <input type="text" name="mask" id="mask">
+        <table>
+            <tr>
+                <td class="label">
+                    Network Address:
+                </td>    
+                <td>
+                    <input type="text" name="address" value="192.168.1.34/24" id="addr">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Network:
+                </td>    
+                <td>
+                    <input type="text" name="network" id="netw">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Subnet Mask:
+                </td>    
+                <td>
+                    <input type="text" name="mask" id="mask">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    Subnet Mask Dotted:
+                </td>    
+                <td>
+                    <input type="text" name="dotted" id="dotted">
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 <script src="assets/js/script.js"></script>
