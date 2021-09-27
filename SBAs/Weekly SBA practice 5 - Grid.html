@@ -37,6 +37,51 @@
 
     */
 
+    body{
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 50px;
+    }
+
+    .tetris.I{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .tetris.O {
+        grid-template: ". ."
+                       ". .";
+    }
+
+    .tetris.L{
+        
+        grid-template: repeat(3,1fr) / 1fr 1fr;
+        grid-auto-flow: column;
+    }
+
+    .tetris.T{
+        
+    }
+    .tetris.J{
+
+    }
+    .tetris.S{
+
+    }
+    .tetris.Z{
+
+    }
+
+
+    /* Reference image */
+    .tetris.Z::after{
+        content:url(https://static.wikia.nocookie.net/tetrisconcept/images/c/ca/Tetromino_image.png);
+        transform: scale(300%);
+        position:absolute;
+        left: 50%;
+    }
+
+
+
 </style>
 
 <body>
