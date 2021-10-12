@@ -63,8 +63,80 @@
     <script>
 
         /* WRITE YOUR CODE HERE! */
-        
 
+        /* Fields/data */
+        const genButton = document.getElementById('generate')
+        const apiUrl = 'https://rickandmortyapi.com/api/character'
+
+        /* Functions */
+        const fetchPageData = async url => {
+        
+            // Fetch data to get pages count and construct the new url string
+            const pages = await getPages(url)
+            url += pickPage(pages)
+            console.log('The page url is:', url)
+
+            // Fetch the actual page data
+            res = await fetch(url)
+            data = await res.json()
+            
+            return data;
+        }
+
+        const getPages = async url => {
+            let res = await fetch(url)
+            let data = await res.json()
+            return data.info.pages
+        }
+
+        const pickPage = pages => {
+            const ranPage = Math.floor(Math.random() * pages)
+            console.log('The random number is:', ranPage)
+            return '?page=' + ranPage
+        }
+
+        const pickRandomCharacter = data => {
+            const characters = data.results
+            const index = Math.floor(Math.random() * characters.length)
+            return characters[index]
+        }
+
+        const loadData = (player, data) => {
+
+            // Select the player element
+            const playerElement = document.querySelector(player)
+            console.log(`playerElement ${player}`, playerElement)
+
+            // Set the avatar
+            const image = 'url(' + data.image + ')'
+            const avatar = playerElement.querySelector('.avatar')
+            avatar.style.backgroundImage = image
+            
+            // Set the name, species and type
+            playerElement.querySelector('.name').innerHTML = data.name
+            playerElement.querySelector('.species').innerHTML = data.species
+            playerElement.querySelector('.type').innerHTML = data.type
+        }
+
+        /* Code */
+        genButton.addEventListener('click', async () => {
+            console.clear()
+            const page = await fetchPageData(apiUrl)
+            console.log('The page data is:', page)
+            let player1
+            let player2
+
+            // Duplicate prevention
+            do {
+                player1 = pickRandomCharacter(page)
+                player2 = pickRandomCharacter(page)
+            } while (player1 === player2);
+
+            console.log(`player1 data:`, player1)
+            console.log(`player2 data:`, player2)
+            loadData(`.player1`, player1)
+            loadData(`.player2`, player2)
+        })
 
     </script>
     
