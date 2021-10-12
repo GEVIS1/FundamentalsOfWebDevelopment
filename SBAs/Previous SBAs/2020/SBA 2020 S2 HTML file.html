@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://moodle.op.ac.nz/pluginfile.php/1485515/mod_resource/content/1/SBA%202020%20S2%20HTML.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- QUESTION 1 (6 marks) ----------------------------------------------------------------------------------------
+    
+        Style the blockquote element below to look like the example in the PDF using CSS.         
+        You cannot edit the HTML or TEXT in any way... you can ONLY CHANGE CSS to achieve the result.
+        You MAY add new styles as needed.
+        
+        Add your CSS to the style tags below.
+
+        Hint: you may want to look into the 'before' and 'after' pseudo elements
+        Hint: the quotation character used is “
+        Hint: the quotation mark font is Georgia
+
+    -->
+
+    <style>
+    
+        /* ADD YOUR ANSWERS FOR QUESTION 1 HERE */
+
+        blockquote{             
+            font-family:sans-serif;    
+            background-color:#f2f2f2;
+            padding:40px;        
+            width:30ch;
+        }
+
+
+    
+    </style>
+
+    <blockquote>
+        My greatest pain in life is that I will never be able to see myself perform live.
+    </blockquote>
+
+    <!-- END OF QUESTION 1 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 2 (8 marks) ----------------------------------------------------------------------------------------
+    
+        Look at the documentation for this API: https://noopschallenge.com/challenges/wordbot
+
+        Using JavaScript, fetch 9 dog breeds from the API (the dog set), and populate the table 
+        below with rows and cells so it looks like the example in the PDF.
+        
+        Note: your dog breed names will likely be different than those in the example... this is ok!
+
+        Write your JavaScript answer in the script tags below.        
+
+    -->
+
+    <style>
+
+        table { border-collapse:collapse;vertical-align: middle }        
+        td { border: 2px solid grey;width:100px;height:100px;padding:30px;text-align:center }
+    
+    </style>
+
+    <table></table>
+
+    <script>
+    
+        /* ADD YOUR ANSWER FOR QUESTION 2 HERE */        
+
+    
+    </script>
+
+    <!-- END OF QUESTION 2 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 3 (2 marks) ----------------------------------------------------------------------------------------
+
+        The below JavaScript code produces an error in the console.
+
+        1) Explain why the error is happening... what does it mean? Write your answer here:
+
+
+
+
+        2) Fix the code where indicated below to console out the subject and message strings into a single string 
+        (concatenated - see PDF for expected result).
+
+        Do not change/edit the data object.
+        Do not simply write the string in the console.log()!
+        
+        Write your fixed code in the script tags below.
+
+    -->
+
+    <script>
+    
+        /* data */
+        let emails = {
+            "subject":"Web SBA",
+            "message":"This SBA is way too easy!"
+        }
+
+        /* Fix this code here to console.log the string as expected */
+        emails.forEach(email => {
+            console.log(email.subject + " " + email.message);
+        });        
+    
+    </script>
+
+    <!-- END OF QUESTION 3 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 4 (2 marks) ----------------------------------------------------------------------------------------
+
+        The below JavaScript code produces an error in the console.
+
+        1) Explain why the error is happening... what does it mean? Write your answer here:
+
+
+
+
+        2) Fix the code so it performs as expected (see PDF for expected result).
+
+    -->
+
+    <script>
+
+        document.querySelector("#green").style.color = "green";
+
+    </script>
+
+    <div id="green">This text should turn green.</div>
+
+    <!-- END OF QUESTION 4 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 5 (5 marks) ----------------------------------------------------------------------------------------
+
+        Write some JavaScript code that takes an entered name from the input below, and appends it to the output_div.
+        Write your JavaScript in the script tags indicated below.
+        See the PDF for an example of what the final output should look like.        
+
+    -->
+
+    <form style="margin-top:100px">
+        <label for="name">Enter your name:</label>
+        <input id="name" name="name" type="text">
+
+        <input id="submit_button" type="submit">
+    </form>
+
+    <div id="output_div">
+
+    </div>
+
+    <script>
+    
+        /* WRITE YOUR ANSWER FOR QUESTION 5 HERE */        
+        
+    
+    </script>
+
+    <!-- END OF QUESTION 5 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 6 (2 marks) ----------------------------------------------------------------------------------------
+        
+        Write some JavaScript code that sorts the array of objects by the 'age' property.
+        The PDF shows how the final output should look.    
+
+    -->
+
+    <script>
+    
+        let arr = [
+            { "name": "Adon", "age":35 },
+            { "name": "Bob", "age":24 },
+            { "name": "Sarah", "age":66 }
+        ]        
+
+        console.log(arr);
+
+        /* WRITE YOUR ANSWER FOR QUESTION 6 HERE */
+
+    
+    </script>
+
+    <!-- END OF QUESTION 6 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 7 (2 marks) ----------------------------------------------------------------------------------------
+
+        Add some CSS to the styles below so the text wraps around the image in a circular shape.
+        See the PDF for the expected result.
+
+        Hint: you only need to add 1 new CSS property to achieve the result.
+
+    -->
+
+    <style>
+    
+        /* WRITE YOUR ANSWER FOR QUESTION 7 IN HERE */
+
+        main {
+            margin-top:100px;
+            max-width: 600px;
+        }
+
+        main img {
+            border-radius: 50%;
+            float: left;
+            margin-right: 25px;
+        }
+
+        main p {
+            margin-left: 70px;
+        }
+    
+    </style>
+
+    <main>
+        <img src="./SBA 2020 S2 HTML files/200x200.jpg" alt="BM">
+        <p>        
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa commodi aperiam totam voluptatum dolorum cum praesentium iure tempore provident, similique ipsam pariatur. Ex, nulla rerum facere iusto quae reiciendis mollitia!
+            Veniam a omnis beatae necessitatibus illo! Rerum dolores quam nostrum libero consequuntur ex doloremque, iure aspernatur quae aperiam natus quidem eius, veniam quod ipsum voluptas alias! Ipsam assumenda consectetur deserunt.
+            Autem illo est obcaecati. Quia recusandae, nostrum fugiat eius dolorem praesentium similique error aperiam ab ipsum? Voluptate neque recusandae sed ea repudiandae porro nemo ratione cumque impedit, optio sapiente consequatur?
+            Ducimus facilis commodi nisi adipisci atque dignissimos vitae tenetur, nobis architecto corrupti voluptate nulla repellendus necessitatibus exercitationem nesciunt odio sit molestiae mollitia eius cupiditate provident rerum. Praesentium nesciunt eum rem!
+            Quam, earum deserunt. Aspernatur veritatis odit amet neque impedit mollitia magni officiis perspiciatis architecto officia possimus repudiandae nemo quia qui recusandae, reiciendis saepe sunt, sed dolores incidunt nihil eligendi quisquam!
+            Magnam perspiciatis animi quisquam quibusdam, dolorem ad soluta obcaecati et eveniet sequi autem aspernatur molestiae nihil architecto, harum fugit error aut! Tempore, voluptates. Veniam dignissimos neque illum, asperiores alias praesentium.
+            Quam modi dolorum provident doloribus dolorem, ullam similique ipsam consequatur tenetur temporibus aliquam. Voluptatem, veritatis. Ipsa magni minus voluptatibus laborum incidunt recusandae nisi deserunt officiis. Sit, exercitationem. Aspernatur, voluptatibus impedit.
+            Delectus, voluptas! Amet, hic eligendi. Ut, aliquid sapiente maiores corporis nesciunt molestias similique dolorum, mollitia suscipit voluptates facere tempora fugiat commodi eaque. Illum, quia pariatur? Modi praesentium doloremque nostrum deleniti.
+            Sunt voluptate inventore quae illo fugit asperiores? Quidem perspiciatis deleniti, reprehenderit culpa magni voluptates? Suscipit eius reiciendis libero? Eveniet atque nisi unde sunt non iste natus repellat quis! Tenetur, voluptatum.
+            Quis at assumenda neque? Reprehenderit ipsum amet perferendis! Natus nostrum totam ipsum explicabo sunt dolorem aliquam debitis porro dicta cumque, in voluptatum tenetur id dolores et vel, excepturi incidunt minus.
+            Esse voluptatum enim, praesentium quae accusantium assumenda illo soluta minima cumque doloribus laboriosam debitis modi voluptates distinctio fuga fugiat tempore aliquid quam sit atque! Vitae, eligendi! Eius et aut impedit!
+        </p>
+    </main>
+        
+    <!-- END OF QUESTION 7 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 8 (3 marks) ----------------------------------------------------------------------------------------
+
+        Change the font of the paragraph below to Roboto 700 weight.
+        The PDF shows what the final text should look like.
+
+    -->
+
+    <style>
+
+        /* WRITE YOUR STYLES FOR QUESTION 8 HERE */
+        
+
+    </style>
+
+    <p id="roboto">
+        Arigato Mr. Roboto!
+    </p>
+
+
+</body></html>

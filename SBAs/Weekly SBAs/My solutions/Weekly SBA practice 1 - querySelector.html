@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+        <div class="item">
+            This is item number <span class="number">0</span> in the container.
+        </div>
+        <div class="item">
+            This is item number <span class="number">0</span> in the container.
+        </div>
+        <div class="item">
+            This is item number <span class="number">0</span> in the container.
+        </div>
+        <div class="item">
+            This is item number <span class="number">0</span> in the container.
+        </div>
+    </div>
+
+    <script>
+
+        let colours = ["blue","hotpink","maroon","greenyellow"];
+
+        /*
+        Using JAVASCRIPT ONLY (i.e. do not write any CSS styles), do the following:
+
+        1. Change the font-size of the container div to 60px;
+        
+        2. Select all the items, iterate through the array, and apply the corresponding
+            colour from the colours array to the background (i.e. the first item should be
+            blue, the second item should be hotpink, etc)
+        
+        3. While still iterating through the items, select the nested number span and change
+            the 0 to be the appropriate number in the container (i.e. the first item's number
+            should say 1, the second item's number should say 2, etc)
+        */
+       
+        // 1.
+        document.querySelector("#container").style.fontSize = "60px"; 
+        
+        // 2. + 3.
+        let items = document.querySelectorAll(".item"); // Put all item class elements into an array
+        
+        items.forEach( (element, index) => {
+           element.style.backgroundColor = colours[index]; // Set div colour
+           element.querySelector(".number").innerHTML = ++index; // Set span number
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .block{ width:50px;height:50px; border:1px solid black; box-sizing: border-box; }
+
+    .tetris{ display:grid;width:fit-content;grid-template-columns: 1fr 1fr 1fr; }
+
+    .I .block{ background: lightblue; }
+    .O .block{ background: yellow; }
+    .L .block{ background:orange; }
+    .T .block{ background: purple; }
+    .J .block{ background: blue; }
+    .S .block{ background: limegreen; }
+    .Z .block{ background: red; }
+    
+    /* 
+
+        You are going to make the appropriate tetris shapes by manipulating the CSS grid on these elements.
+        You can confirm the shapes you need to make here: https://tetris.fandom.com/wiki/Tetromino
+
+        You can make them in any rotation (e.g. the T can be pointing down or up).
+
+        DO NOT alter any of the existing styles ABOVE: e.g. DO NOT overwrite the .tetris grid columns to make your
+        shapes... you will write NEW STYLES to the approapriate 'block' classes ONLY... e.g. .I .block, or .J .block
+
+        You will likely need to employ some pseduo-selectors, such as nth-of-type etc to make the shapes.
+
+        WRITE YOUR NEW STYLES BELOW!
+
+    */
+
+    /* row gap for clarity */
+    body{
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 50px;
+    }
+
+    .I .block:last-child{
+        grid-column-start: 4;
+    }
+
+    .O .block:nth-child(3){
+        grid-column-start: 1;
+    }
+
+    .L .block:nth-last-child(1n+3){
+        grid-column: -1/-4; 
+    }
+    
+    .T .block:nth-child(4){
+        grid-column-start: 2;
+    }
+    
+    .J .block:nth-child(-1n+1){
+        grid-column-start: 2;
+    }
+    .S .block:nth-child(1){
+        grid-column-start: 2;
+    }
+    .Z .block:nth-child(){
+        background: hotpink;
+
+    }
+
+</style>
+
+<body>
+
+    <div class="tetris I">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <div class="tetris O">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>    
+
+    <div class="tetris L">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <div class="tetris T">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <div class="tetris J">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <div class="tetris S">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <div class="tetris Z">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+    
+</body>
+</html>

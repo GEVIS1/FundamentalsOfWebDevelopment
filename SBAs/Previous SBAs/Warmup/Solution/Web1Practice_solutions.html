@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://moodle.op.ac.nz/pluginfile.php/1168657/mod_resource/content/1/Web1Practice_solutions.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+        .child_div{ color: blue; }
+
+        /* 1. Write a CSS selector that changes the text color of ONLY the child_divs inside main_div_two */
+
+        #main_div_two .child_div{ color:red }
+
+        /* 2. Write a CSS selector that makes the SECOND child_div of each set BOLD */
+
+        .child_div:nth-child(2){ font-weight:bold }
+
+        /* 3. Now HIDE all the child_divs */
+
+        .child_div{ display:none }
+
+        /* 4. When you put your mouse over either of the main_divs, you should show all the child_divs IN ONLY THAT MAIN_DIV */
+
+        div:hover .child_div{ display:block }
+
+    </style></head>
+
+    
+
+    <body>
+        <div id="main_div_one">
+            I am a main div
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+        </div>
+        <div id="main_div_two">
+            I am a main div
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+        </div>
+    
+
+    <script>
+
+        //1. Create a JAVASCRIPT OBJECT called myObj
+
+        let myObj = {};
+        console.log(myObj);
+
+        //2. Assign a property to myObj called "food" and set the value to be an EMPTY ARRAY - so, key is "food" and value is an empty array
+
+        myObj["food"] = [];
+        console.log(myObj);
+
+        //3. Add three different foods (strings) to the array - so, like "banana" , "pizza" , "apple" , etc...
+
+        myObj["food"].push("banana");
+        myObj["food"].push("pizza");
+        myObj["food"].push("apple");
+        console.log(myObj);
+
+        //4. Change the food at INDEX POSITION 1 to "watermelon"
+
+        myObj["food"][1] = "watermelon";
+        console.log(myObj);
+
+        //5. Iterate through the array of food and console out a string for each that reads "I love [PUT_THE_FOOD_HERE]" - so "I love pizza" , "I love watermelon" , etc...
+
+        myObj["food"].forEach(f => {
+            console.log(`I love ${f}`);
+        });
+
+        //6. Assign a new property to myObj called "animals" and set the value to be an EMPTY JAVASCRIPT OBJECT
+
+        myObj["animals"] = {};
+        console.log(myObj);
+
+        //7. Console out ALL THE KEYS now in myObj
+
+        console.log(Object.keys(myObj));
+
+        /*8. Here is an API for Pokemon:
+        https://pokeapi.co/
+
+        - Go to this URL and read the documentation on how to use this API
+        - Fetch a RANDOM pokemon
+        - get an 'img' URL from the JSON that is returned
+        - Append a new img element to the body of this page, and set the 'src' attribute to be the returned img URL
+        
+         */
+
+        fetch("https://pokeapi.co/api/v2/pokemon/pikachu").then(response => response.json()).then(result => {
+            let img = document.createElement("img");
+            img.setAttribute("src",result["sprites"]["front_default"]);
+            document.body.appendChild(img);
+        });
+
+    </script>
+
+<img src="./Web1Practice_solutions_files/25.png"></body></html>

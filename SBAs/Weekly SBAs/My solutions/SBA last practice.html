@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .battle{ display:flex;justify-content: center;align-items:center }
+    .battle div{ display:flex;justify-content: center;align-items:center;flex-direction:column }
+    .avatar{ width:200px; height:200px; background-position:center;background-size:cover }
+    img{ margin: 0 30px }
+
+    .player1{ background: lightsalmon }
+    .player2{ background: lightslategray }
+
+</style>
+<body>
+
+    <div class="battle">
+        <div class="player1">
+            <div class="avatar"></div>
+            <div class="stats">
+                <h1 class="name"></h1>
+                <h2 class="species"></h2>
+                <h3 class="type"></h3>
+            </div>
+        </div>
+        <img width="50px" height="50px" src="data:image/jpeg;base64,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" />
+        <div class="player2">
+            <div class="avatar"></div>
+            <div class="stats">
+                <h1 class="name"></h1>
+                <h2 class="species"></h2>
+                <h3 class="type"></h3>
+            </div>
+        </div>
+    </div>
+
+    <button id="generate">Generate a new battle!</button>
+
+    <!--
+
+        It's a Rick and Morty Battle Royale!
+
+        Rig up the page to generate an epic battle between 2 Rick and Morty characters using this API:
+        https://rickandmortyapi.com/documentation/#character (READ ON HOW TO USE)
+
+        You need to:
+
+        - add an event listener to the button so when you click it, a new battle is generated
+        - randomly fetch a page of characters (hint: you can get the total number of pages from the API
+        and use it in your random number generation)
+        - from the resulting character page, randomly choose 2 characters and populate the player1
+        and player2 divs with the appropriate info - the avatar, the name, the species and the type.
+        - bonus points if you can make your code DRY
+
+    -->
+
+    <script>
+
+        /* WRITE YOUR CODE HERE! */
+
+        /* Fields/data */
+        const genButton = document.getElementById('generate')
+        const apiUrl = 'https://rickandmortyapi.com/api/character'
+
+        /* Functions */
+        const fetchPageData = async url => {
+        
+            // Fetch data to get pages count and construct the new url string
+            const pages = await getPages(url)
+            url += pickPage(pages)
+            console.log('The page url is:', url)
+
+            // Fetch the actual page data
+            res = await fetch(url)
+            data = await res.json()
+            
+            return data;
+        }
+
+        const getPages = async url => {
+            let res = await fetch(url)
+            let data = await res.json()
+            return data.info.pages
+        }
+
+        const pickPage = pages => {
+            const ranPage = Math.floor(Math.random() * pages)
+            console.log('The random number is:', ranPage)
+            return '?page=' + ranPage
+        }
+
+        const pickRandomCharacter = data => {
+            const characters = data.results
+            const index = Math.floor(Math.random() * characters.length)
+            return characters[index]
+        }
+
+        const loadData = (player, data) => {
+
+            // Select the player element
+            const playerElement = document.querySelector(player)
+            console.log(`playerElement ${player}`, playerElement)
+
+            // Set the avatar
+            const image = 'url(' + data.image + ')'
+            const avatar = playerElement.querySelector('.avatar')
+            avatar.style.backgroundImage = image
+            
+            // Set the name, species and type
+            playerElement.querySelector('.name').innerHTML = data.name
+            playerElement.querySelector('.species').innerHTML = data.species
+            playerElement.querySelector('.type').innerHTML = data.type
+        }
+
+        /* Code */
+        genButton.addEventListener('click', async () => {
+            console.clear()
+            const page = await fetchPageData(apiUrl)
+            console.log('The page data is:', page)
+            let player1
+            let player2
+
+            // Duplicate prevention
+            do {
+                player1 = pickRandomCharacter(page)
+                player2 = pickRandomCharacter(page)
+            } while (player1 === player2);
+
+            console.log(`player1 data:`, player1)
+            console.log(`player2 data:`, player2)
+            loadData(`.player1`, player1)
+            loadData(`.player2`, player2)
+        })
+
+    </script>
+    
+</body>
+</html>
