@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://moodle.op.ac.nz/pluginfile.php/1493131/mod_resource/content/2/SBA%202020%20S1%20HTML%20file.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    </head>
+    <body>
+
+        <!-- QUESTION 1 (2 marks) -------------------------------------------------------------------
+            You have been given the following HTML structure (see below).
+            Without changing the HTML at all (e.g. adding any classes or IDs or new elements),
+            create ONE CSS rule that will make this HTML render like image in the PDF
+            (i.e. every 3rd div is now skyblue in colour).
+        
+            Add your CSS rule to the <style> tags just below:
+        -->
+
+        <style>
+            /* ADD YOUR ANSWER FOR QUESTION 1 HERE */
+
+
+        </style>
+
+        <!-- HTML for Question 1 -->
+        
+        <div>first</div>
+        <div>second</div>
+        <div>third</div>
+        <div>fourth</div>
+        <div>fifth</div>
+        <div>sixth</div>
+        <div>seventh</div>
+        <div>eighth</div>
+        <div>ninth</div>
+
+        <!-- END OF QUESTION 1 ------------------------------------------------------------------->
+
+
+        <!-- QUESTION 2 (4 marks) -------------------------------------------------------------------
+            You have been given the following HTML structure (see below).
+            Without changing the HTML at all (e.g. adding any classes or IDs or new elements),
+            create TWO CSS rules that will make this HTML render like image in the PDF
+            (hint: the only style that has changed is the background-color - pink and grey).
+        
+            Add your CSS rules to the <style> tags just below:
+        -->
+
+        <style>
+            /* ADD YOUR ANSWERS FOR QUESTION 2 HERE */
+
+
+        </style>
+
+        <!-- HTML for Question 2 -->
+
+        <div class="cat">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+
+        <div class="dog">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+
+        <!-- END OF QUESTION 2 ------------------------------------------------------------------->
+
+        <!-- QUESTION 3 (3 marks) -------------------------------------------------------------------
+            Each of the following HTML elements is written incorrectly. 
+            Rewrite each HTML element so they give the intended result (see PDF for examples).
+        
+            Add your HTML code BELOW each example.
+        -->
+
+        <!-- #1 -->
+        <input type="submit">Press me to submit
+
+        
+        <!-- PUT YOUR HTML FOR #1 JUST ABOVE THIS LINE -->
+        
+        <!-- #2 -->
+        <div color="red">Some text</div>
+
+        
+        <!-- PUT YOUR HTML FOR #2 JUST ABOVE THIS LINE -->
+
+        <!-- #3 -->
+        <img>https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500
+
+        
+        <!-- PUT YOUR HTML FOR #3 JUST ABOVE THIS LINE -->
+
+        <!-- END OF QUESTION 3 ------------------------------------------------------------------->
+
+
+        <!-- QUESTION 4 (3 marks) -------------------------------------------------------------------
+            Consider the following JavaScript code (see below).
+            Write some JavaScript code to update EVERY name variable inside myThing to “Jason”.
+        
+            Add your JavaScript code to the <script> tags indicated below.
+        -->
+
+        <script>
+
+            let myThing = [
+                {
+                    "name" : "John",
+                    "age" : "26"
+                },
+                {
+                    "name" : "Sam",
+                    "age" : "18"
+                },
+                {
+                    "name" : "Billy",
+                   "age" : "30"
+                }
+            ];
+
+            /* WRITE YOUR JAVASCRIPT CODE FOR QUESTION 4 BELOW THIS */
+
+
+        </script>
+
+        <!-- END OF QUESTION 4 ------------------------------------------------------------------->
+
+
+        <!-- QUESTION 5 (6 marks) -------------------------------------------------------------------
+            Consider the following HTML and CSS (see below).
+            Use the myThing variable from Question 4, and using JavaScript, 
+            append three new list items to this list with the ages specified in myThing. 
+            Your final list should look like the example in the PDF.
+
+            HINT: Use the .classList.add() method to apply the list-item class -> look it up for how to use.
+        
+            Add your JavaScript code to the <script> tags indicated below.
+        -->
+
+        <!-- CSS for QUESTION 5 -->
+        <style>
+            .list-item{ padding:10px; color:maroon; }
+        </style>
+
+        <!-- HTML for QUESTION 5 -->
+        <ol id="ageList">
+            <li class="list-item">15 years old</li>
+            <li class="list-item">19 years old</li>
+            <li class="list-item">43 years old</li>
+        </ol>
+
+        <script>
+
+            /* WRITE YOUR JAVASCRIPT CODE FOR QUESTION 5 BELOW THIS */
+
+
+        </script>
+
+        <!-- END OF QUESTION 5 ------------------------------------------------------------------->
+
+
+        <!-- QUESTION 6 (10 marks) -------------------------------------------------------------------
+            You are going to use the Hexbot from https://noopschallenge.com/challenges/hexbot 
+            to create a beautiful dot painting on your page.
+
+            You will:
+                •	Fetch 100 random colours using the Hexbot (read the documentation for how).
+                •	Provide the width and height parameters to get coordinates returned to you also (300 will be fine for the width and height values).
+                •	Iterate through the returned list, and create a new div for each colour. 
+                    Apply the class dot and use the CSS style provided for creating your ‘dots’ (see below).
+                •	Finally, as you iterate through your colours, you need to use JavaScript to apply the returned colour as the background-color style to your div. 
+                •	You also need to apply the returned coordinates (x and y) as the left and top properties of each div.
+                •	Append each div to the body of the doc.
+                •	Your final page should look similar to the example in the PDF.
+
+
+            HINT: You need to include “px” when you are assigning your left and top values -> you will need to concatenate this to the end of your values, e.g. 100px, 56px, etc, etc
+        
+            Add your JavaScript code to the <script> tags indicated below.
+        -->
+
+        <!-- CSS for QUESTION 6 -->
+        <style>
+            .dot{ padding:10px;position:absolute;border-radius:100% }
+        </style>
+
+        <script>
+
+            /* WRITE YOUR JAVASCRIPT CODE FOR QUESTION 6 BELOW THIS */
+
+
+        </script>
+
+        <!-- END OF QUESTION 6 ------------------------------------------------------------------->
+
+
+        <!-- QUESTION 7 (2 marks) -------------------------------------------------------------------
+            The following code results in undefined being logged to the console (see below).
+
+            1. Why (explain)?
+
+            -- WRITE YOUR EXPLANATION HERE: --
+
+
+
+            ----------------------------------
+
+            2. How can you fix the code to correctly log “The SBA is over!” to the console?
+            
+            -- WRITE YOUR CORRECT CODE IN THE SCRIPT TAGS BELOW --
+
+        -->
+
+        <script>
+
+            /* INCORRECT CODE FOR QUESTION 7 */
+            let test = [
+                { "message" : "The SBA is over!" }
+            ];
+            console.log(test["message"]);
+
+
+            /* WRITE YOUR CORRECTED CODE BELOW THIS */
+
+
+        </script>
+
+        <!-- END OF SBA! ------------------------------------------------------------------->
+
+    
+
+</body></html>

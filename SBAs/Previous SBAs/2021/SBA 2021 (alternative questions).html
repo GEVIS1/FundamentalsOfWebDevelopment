@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://moodle.op.ac.nz/pluginfile.php/1485513/mod_resource/content/1/SBA%202021%20%28alternative%20questions%29%20HTML.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- QUESTION 1 (8 marks) ----------------------------------------------------------------------------------------
+     
+        Fetch a list of PRODUCTS from the https://reqres.in/ API. Read the documentation for how to access the API.
+        Create a 'card' for each product by manipulating the DOM with JavaScript inside the script tags below. 
+        Display the name and year in the card, and change the card background to the color supplied.
+        Style your cards to match the PDF document.
+
+    -->
+
+    <style>
+    
+        /* ADD YOUR STYLES FOR QUESTION 1 HERE */
+
+        ul#cards{
+            display:flex;
+        }
+
+        ul#cards li{            
+            border:1px solid grey;
+            margin-right:20px;
+            margin-bottom:20px;
+        }
+
+        ul#cards li img{
+            width:100%;
+            padding-right:20px;
+        }
+
+        ul#cards li div{
+            
+        }
+    
+    </style>
+
+    <ul id="cards">
+        
+    </ul>
+
+    
+    <script>
+    
+        /* ADD YOUR SCRIPT FOR QUESTION 1 HERE */
+        
+    
+    </script>
+
+    <!-- END OF QUESTION 1 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 2 (5 marks) ----------------------------------------------------------------------------------------
+    
+        The below HTML and CSS displays the skills for 2 heroes and 2 bosses (in a hypothetical game)
+        Do NOT change the HTML, and do NOT edit existing CSS rules. Just add new CSS to:
+ 
+        1. Change the text colour of the Fire Warrior's heading to "firebrick" (1 mark)
+        2. Change the text colour of the first skill (NOT the special attack) of both bosses' list to "white" (2 mark)
+        3. Change the list-style of all the skill lists to 'square' EXCEPT the Fire Troll (leave his as is).
+           (2 marks for writing this as concisely as possible - i.e. 1 selector/style definition;
+           otherwise 1 mark for getting the style correct regardless of how)
+
+    -->
+
+    <style>
+
+        .hero, .boss{
+            border:1px solid black;
+            padding:10px;
+            width:fit-content;
+            margin-bottom:20px;
+        }
+
+        .fire{
+            background:lightcoral;
+        }
+
+        .water{
+            background:lightblue;
+        }
+
+        .earth{
+            background:lightgreen;
+        }        
+    
+    </style>
+
+    <div class="hero fire">
+        <h2>Fire warrior (hero)</h2>
+        <ul class="skills">
+            <li>Fireball</li>
+            <li>Fire shield</li>
+        </ul>
+    </div>
+
+    <div class="hero water">
+        <h2>Water wizard (hero)</h2>
+        <ul class="skills">
+            <li>Water wall</li>
+            <li>Healing</li>
+        </ul>
+    </div>
+
+    <div class="boss fire">
+        <h2>Fire troll (boss)</h2>
+        <ul class="skills">
+            <li>Fire sword</li>
+            <li>Super fire attack (special)</li>            
+        </ul>
+    </div>
+
+    <div class="boss earth">
+        <h2>Earth golem (boss)</h2>
+        <ul class="skills">
+            <li>Rock throw</li>   
+            <li>Super earth attack (special)</li>          
+        </ul>
+    </div>
+
+    <!-- END OF QUESTION 2 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 3 (3 marks) ----------------------------------------------------------------------------------------
+
+        Using JavaScript, take the given string and REPLACE the THIRD name (separated by commas) with 'BOWSER'        
+        Replace ONLY the THIRD name! (Hint: you might want to turn the string into an array first?)
+        Your answer should be A STRING and be assigned to newString.
+        See the PDF for an example of the expected output.
+
+    -->
+
+    <script>
+            
+        let string = "MARIO,LUIGI,MARIO,MARIO,MARIO";
+        let newString = "";
+
+        /* PUT YOUR ANSWER FOR QUESTION 3 HERE */
+
+        console.log(newString);
+    
+    </script>
+
+    <!-- END OF QUESTION 3 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 4 (2 marks) ----------------------------------------------------------------------------------------
+
+        Filter the provided JavaScript array into two new arrays, one with all the 'rich' (with $10000 or more) 
+        and one with all the 'poor' (with less than $10000).
+        See the PDF for the desired result.
+
+    -->
+
+    <script>
+
+        let rich;
+        let poor;
+
+        let all = [
+            {name:"Suzie",money:9000},
+            {name:"Cameron",money:9999},
+            {name:"Lauren",money:200},
+            {name:"Simon",money:10456},
+            {name:"Dylan",money:180000},
+            {name:"Pam",money:15}
+        ];
+
+        /* PUT YOUR ANSWER FOR QUESTION 4 HERE */
+
+
+
+    </script>
+
+    <!-- END OF QUESTION 4 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 5 (3 marks) ----------------------------------------------------------------------------------------
+
+        WITHOUT ADDING ANY HTML write some css to make the given text look like the PDF.
+        Hint: the font used is a Google Font called 'Bodoni Moda';
+
+    -->
+
+    <style>
+
+        /* WRITE YOUR ANSWER FOR QUESTION 5 HERE */ 
+        .fancy{            
+            font-size:20px;
+            width:60ch;
+        }        
+
+    </style>
+
+    <p class="fancy">
+        It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.
+    </p>
+
+    <!-- END OF QUESTION 5 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 6 (2 marks) ----------------------------------------------------------------------------------------
+        
+        Below is a rudimentary 'typewriter'... as you type in the input, the text appears on the 'page'...
+        However, there is currently a bug where each letter does not appear until THE NEXT letter is entered.
+        (Try it out to see the bug in action).
+        Fix the code so each letter appears on the page AS it is typed in the input. 
+        (Hint: this question is testing your knowledge of WHEN different types of events are fired.)
+        See PDF for desired output.
+
+    -->
+
+    <style>
+    
+        div.page{
+            margin:50px 20px;
+            border:1px solid #555;
+            padding:30px;
+            height:300px;
+            width:200px;
+            font-family:'Courier New', Courier, monospace;
+            word-wrap: break-word;            
+        }
+
+        input.typewriter {
+            padding:30px;
+            margin-left:20px;
+            width:200px;
+        }
+
+        label{
+            margin-left:20px;
+            font-size:small;
+            text-transform:uppercase;
+            color:#555;
+            font-weight:bold;
+        }
+
+    </style>
+
+    <div class="page"></div>
+    <label for="typewriter">Typewriter</label><br>
+    <input id="typewriter" class="typewriter" type="text" placeholder="Type here to write on the page!">
+
+    <script>
+
+        /* WRITE YOUR ANSWER FOR QUESTION 6 HERE */
+
+        document.querySelector("input.typewriter").addEventListener("keydown", e => {
+            document.querySelector("div.page").innerHTML = e.target.value;
+        });
+    
+    </script>
+
+    <!-- END OF QUESTION 6 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 7 (4 marks) ----------------------------------------------------------------------------------------
+
+        There is CSS missing! 
+        Work out which properties and values to add back in to make the results look like the guide picture in the PDF.
+
+    -->
+
+    <div class="grid">
+        <div class="item1">One</div>
+        <div class="item2">Two</div>
+    </div>
+          
+
+    <style>
+    
+        /* WRITE YOUR STYLES FOR QUESTION 7 IN HERE */
+
+        .grid {
+            margin-top:40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            gap: 10px;
+            font:1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+            width:800px;
+        }
+
+        .grid div{
+            border-radius: .5em;
+            color: #fff;
+            padding: .5em;            
+        }
+
+        .item1 {
+            background-color: rgba(74,102,112,.7);
+            border: 5px solid rgba(74,102,112,1);
+
+        }
+
+        .item2 {
+            background-color: rgba(214,162,173,.7);
+            border: 5px solid rgba(214,162,173,1);
+            
+        }
+        
+    
+    </style>
+    
+        
+    <!-- END OF QUESTION 7 -------------------------------------------------------------------------------->
+
+
+
+    <!-- QUESTION 8 (3 marks) ----------------------------------------------------------------------------------------
+
+        (2 parts!)
+
+        The following code should pick a random dog from the array, and print the dog to the console.
+        However, the code currently results in 'undefined' being printed in the console.
+        
+        1. Explain why the following code produces an 'undefined' result. (1 mark)
+
+            ==> WRITE YOUR ANSWER FOR 1. HERE
+
+
+
+        2. Fix the code to no longer produce this error. (2 marks)
+
+    -->
+
+    <script>
+
+        /* WRITE YOUR ANSWER FOR QUESTION 8 HERE */
+
+        let dogs = ["Fido","Spot","Charlie","Spike","Barnabas"];
+
+        let random = Math.random() * dogs.length;
+        
+        console.log(random);
+        console.log(dogs[random]);  // THIS LINE PRODUCES 'undefined' IN THE CONSOLE      
+        
+
+    </script>
+
+
+</body></html>
