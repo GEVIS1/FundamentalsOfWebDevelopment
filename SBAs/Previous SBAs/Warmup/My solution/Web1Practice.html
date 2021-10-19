@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://moodle.op.ac.nz/pluginfile.php/1164337/mod_resource/content/2/Web1Practice.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+        .child_div{ color: blue; }
+
+        /* 1. Write a CSS selector that changes the text color of ONLY the child_divs inside main_div_two */
+        #main_div_two > .child_div {
+            color: #beef00;
+        }
+        /* 2. Write a CSS selector that makes the SECOND child_div of each set BOLD */
+        .child_div:nth-child(2) {
+            font-weight: bold;
+        }
+        /* 3. Now HIDE all the child_divs */
+        .child_div {
+            visibility: hidden;
+        }
+        /* 4. When you put your mouse over either of the main_divs, you should show all the child_divs IN ONLY THAT MAIN_DIV */
+        /* #main_div_one:hover > .child_div,
+        #main_div_two:hover > .child_div {
+            visibility: visible;
+        } */
+
+        .main:hover > .child_div{
+            visibility: visible;
+        }
+    </style></head>
+
+    
+
+    <body>
+        <div id="main_div_one" class="main">
+            I am a main div
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+        </div>
+        <div id="main_div_two" class="main">
+            I am a main div
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+            <div class="child_div">Hello I am a child</div>
+        </div>
+    
+
+    <script>
+
+        //1. Create a JAVASCRIPT OBJECT called myObj
+        let myObj = Object()
+        console.log('myObj', myObj)
+
+        //2. Assign a property to myObj called "food" and set the value to be an EMPTY ARRAY - so, key is "food" and value is an empty array
+        Object.assign(myObj, { food: Array()})
+        console.log('myObj', myObj)
+
+        //3. Add three different foods (strings) to the array - so, like "banana" , "pizza" , "apple" , etc...
+        myObj.food = ["banana", "pizza", "apple"]
+        console.log('myObj', myObj)
+
+        //4. Change the food at INDEX POSITION 1 to "watermelon"
+        myObj.food[1] = "watermelon"
+        console.log('myObj', myObj)
+
+        //5. Iterate through the array of food and console out a string for each that reads "I love [PUT_THE_FOOD_HERE]" - so "I love pizza" , "I love watermelon" , etc...
+        myObj.food.forEach(food => console.log(`I love ${food}s`))
+
+        //6. Assign a new property to myObj called "animals" and set the value to be an EMPTY JAVASCRIPT OBJECT
+        Object.assign(myObj, {animals: Object()})
+
+        //7. Console out ALL THE KEYS now in myObj
+        Object.keys(myObj).forEach(key => console.log(key))
+
+        /*8. Here is an API for Pokemon:
+        https://pokeapi.co/
+
+        - Go to this URL and read the documentation on how to use this API
+        - Fetch a RANDOM pokemon
+        - get an 'img' URL from the JSON that is returned
+        - Append a new img element to the body of this page, and set the 'src' attribute to be the returned img URL
+        
+         */
+        const api = "https://pokeapi.co/api/v2/pokemon/"
+        let pokemonImage
+        let PokemonPromise = fetch(api)
+            .then(res => res.json())
+            .then(data => data)
+        PokemonPromise.then(data => {
+            let number = 
+        })
+        
+    </script>
+
+</body></html>
